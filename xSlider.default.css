@@ -1,0 +1,48 @@
+.slider {
+	width: 600px;
+	height: 80px;
+	overflow: hidden;
+	position: relative;
+	border: 10px solid whitesmoke;
+	-moz-box-shadow: 0 0 3px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,0.4);
+	box-shadow: 0 0 3px rgba(0,0,0,0.4);
+}
+	.slider .left-arrow, .slider .right-arrow {
+		position: absolute;
+		text-indent: -999px;
+		width: 30px;
+		height: 80px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		top: 0;
+		z-index: 150;
+		cursor: pointer;
+	}
+		.slider .left-arrow {
+			left: 0;
+			background-image: url(../img/arrow-left.png);
+		}
+		.slider .right-arrow {
+			right: 0;
+			background-image: url(../img/arrow-right.png);
+		}
+	
+	.slider .images {
+		position: absolute;
+		width: 2000px; /* temp till js figures out total width */
+		left: 0;
+	}
+		.slider .images img {
+			display: block;
+			position: relative; /* Important for shadows to work right */
+			float: left;
+			border: 1px solid black;
+			margin: -1px 0 0 -1px;
+		}
+	
+	.slider .loading {
+		display: block;
+		font-size: 1.2em;
+		padding: 20px;
+	}
